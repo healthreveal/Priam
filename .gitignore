@@ -67,3 +67,8 @@ atlassian-ide-plugin.xml
 # NetBeans specific files/directories
 .nbattrs
 >>>>>>> build/multi-project
+
+priam-web/logs
+priam-web/logs/
+priam-web/logs/**
+
