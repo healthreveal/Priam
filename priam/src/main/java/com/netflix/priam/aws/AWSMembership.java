@@ -202,11 +202,16 @@ public class AWSMembership implements IMembership
     	try
     	{
     		client = getEc2Client();
+                logger.debug("getEc2Client() has returned client: " + client.toString());
     		Filter nameFilter = new Filter().withName("group-name").withValues(config.getACLGroupName()); //SG 
+                logger.debug("config.getACLGroupName() has returned nameFilter: " + nameFilter.toString());
     		Filter vpcFilter = new Filter().withName("vpc-id").withValues(config.getVpcId());
-    		
+                logger.debug("config.getVpcId() has returned vpcFilter: " + vpcFilter.toString());
+    		 
     		DescribeSecurityGroupsRequest req = new DescribeSecurityGroupsRequest().withFilters(nameFilter, vpcFilter);
+                logger.debug("req is: " + req.toString());
     		DescribeSecurityGroupsResult result = client.describeSecurityGroups(req);
+                logger.debug("result is: " + result.toString());
     		for (SecurityGroup group : result.getSecurityGroups())
     		{
     			logger.debug(String.format("got group-id:%s for group-name:%s,vpc-id:%s", group.getGroupId(), config.getACLGroupName(), config.getVpcId()));
