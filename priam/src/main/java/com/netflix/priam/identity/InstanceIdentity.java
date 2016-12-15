@@ -311,7 +311,14 @@ public class InstanceIdentity
     public boolean isSeed()
     {
         populateRacMap();
+        logger.debug("locMap is: " + locMap.toString());
+        logger.debug("myInstance.getRac() is: " + myInstance.getRac().toString());
+        logger.debug("locMap.get(myInstance.getRac()) is: " + locMap.get(myInstance.getRac()).toString());
+        logger.debug("locMap.get(myInstance.getRac()).get(0) is: " + locMap.get(myInstance.getRac()).get(0).toString());
+        logger.debug("locMap.get(myInstance.getRac()).get(0).getHostName() is: " + locMap.get(myInstance.getRac()).get(0).getHostName().toString());
         String ip = locMap.get(myInstance.getRac()).get(0).getHostName();
+        logger.debug("ip is: " + ip.toString());
+        logger.debug("myInstance.getHostName() is: " + myInstance.getHostName().toString());
         return myInstance.getHostName().equals(ip);
     }
     
