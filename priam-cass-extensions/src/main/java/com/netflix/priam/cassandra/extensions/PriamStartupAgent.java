@@ -55,11 +55,11 @@ public class PriamStartupAgent
         {
             try
             {
-                token = DataFetcher.fetchData("http://127.0.0.1:8080/Priam/REST/v1/cassconfig/get_token");
-                seeds = DataFetcher.fetchData("http://127.0.0.1:8080/Priam/REST/v1/cassconfig/get_seeds");
-                isReplace = Boolean.parseBoolean(DataFetcher.fetchData("http://127.0.0.1:8080/Priam/REST/v1/cassconfig/is_replace_token"));
-                replacedIp = DataFetcher.fetchData("http://127.0.0.1:8080/Priam/REST/v1/cassconfig/get_replaced_ip");
-                extraEnvParams = DataFetcher.fetchData("http://127.0.0.1:8080/Priam/REST/v1/cassconfig/get_extra_env_params");
+                token = DataFetcher.fetchData("http://127.0.0.1:15080/priam-web/REST/v1/cassconfig/get_token");
+                seeds = DataFetcher.fetchData("http://127.0.0.1:15080/priam-web/REST/v1/cassconfig/get_seeds");
+                isReplace = Boolean.parseBoolean(DataFetcher.fetchData("http://127.0.0.1:15080/priam-web/REST/v1/cassconfig/is_replace_token"));
+                replacedIp = DataFetcher.fetchData("http://127.0.0.1:15080/priam-web/REST/v1/cassconfig/get_replaced_ip");
+                extraEnvParams = DataFetcher.fetchData("http://127.0.0.1:15080/priam-web/REST/v1/cassconfig/get_extra_env_params");
 
             }
             catch (Exception e)

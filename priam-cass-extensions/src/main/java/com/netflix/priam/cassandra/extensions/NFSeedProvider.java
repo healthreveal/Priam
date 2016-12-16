@@ -40,7 +40,7 @@ public class NFSeedProvider implements SeedProvider
         List<InetAddress> seeds = new ArrayList<InetAddress>();
         try
         {
-            String priamSeeds = DataFetcher.fetchData("http://127.0.0.1:8080/Priam/REST/v1/cassconfig/get_seeds");
+            String priamSeeds = DataFetcher.fetchData("http://127.0.0.1:15080/priam-web/REST/v1/cassconfig/get_seeds");
             for (String seed : priamSeeds.split(","))
                 seeds.add(InetAddress.getByName(seed));
         }

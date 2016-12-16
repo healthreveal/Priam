@@ -153,7 +153,7 @@ public class DeadTokenRetriever extends TokenRetrieverBase implements IDeadToken
            String textEntity = null;
            
            try {
-              clientResp = service.path("Priam/REST/v1/cassadmin/gossipinfo").accept(MediaType.APPLICATION_JSON).get(ClientResponse.class);	
+              clientResp = service.path("priam-web/REST/v1/cassadmin/gossipinfo").accept(MediaType.APPLICATION_JSON).get(ClientResponse.class);	
 	    
               if (clientResp.getStatus() != 200)
 	             return null;
@@ -195,7 +195,7 @@ public class DeadTokenRetriever extends TokenRetrieverBase implements IDeadToken
     
     private String getBaseURI(String host) 
     {
-           return "http://" + host + ":8080/";
+           return "http://" + host + ":15080/";
     }
 
 	@Override
