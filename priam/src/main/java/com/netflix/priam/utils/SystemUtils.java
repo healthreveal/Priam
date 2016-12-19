@@ -46,12 +46,18 @@ public class SystemUtils
     {
         try
         {
+            logger.debug("url is: " + url);
             HttpURLConnection conn = (HttpURLConnection) new URL(url).openConnection();
+            logger.debug("conn is: " + conn.toString());
             conn.setConnectTimeout(1000);
+            logger.debug("after conn.setConnectTimeout");
             conn.setReadTimeout(1000);
+            logger.debug("after conn.setReadTimeout");
             conn.setRequestMethod("GET");
+            logger.debug("after conn.setRequestMethod");
             if (conn.getResponseCode() != 200)
             {
+                logger.debug("About to throw exception");
                 throw new RuntimeException("Unable to get data for URL " + url);
             }
             byte[] b = new byte[2048];
@@ -67,6 +73,7 @@ public class SystemUtils
         }
         catch (Exception ex)
         {
+            logger.debug("Exception in getDataFromUrl is: " + ex.toString());
             throw new RuntimeException(ex);
         }
 
