@@ -298,12 +298,12 @@ public class AWSMembership implements IMembership
                     for (IpPermission perm : group.getIpPermissions()) {
                         logger.debug("perm is: " + perm.toString());
                         Integer myGetFromPort = perm.getFromPort();
-                        logger.debug("myGetFromPort is: " + mygetFromPort.toString());
+                        logger.debug("myGetFromPort is: " + myGetFromPort.toString());
                         Integer myGetToPort = perm.getToPort();
-                        logger.debug("myGetToPort is: " + mygetToPort.toString());
+                        logger.debug("myGetToPort is: " + myGetToPort.toString());
                         
-                        logger.debug("from is: " + from.toString());
-                        logger.debug("to is: " + to.toString());
+                        logger.debug("from is: " + from);
+                        logger.debug("to is: " + to);
                         
                         if (perm.getFromPort() == from && perm.getToPort() == to) {
                             logger.debug("perm.getIpRanges() is: " + perm.getIpRanges().toString());
