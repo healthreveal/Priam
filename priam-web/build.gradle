@@ -1,6 +1,3 @@
-//plugins {
-//  id 'jetty'
-//}
 
 apply plugin: 'war'
 apply from: 'https://raw.github.com/akhikhl/gretty/master/pluginScripts/gretty.plugin'
@@ -12,17 +9,16 @@ dependencies {
 }
 
 gretty {
-  httpPort = 15080
-  // contextPath = '/priam-web'
-  host = 'ec2-52-2-55-92.compute-1.amazonaws.com'
-  stopKey=91911
-  stopPort=16080
-  // ... many more properties
+    httpPort = 15080
+    host = 'ec2-52-2-55-92.compute-1.amazonaws.com'
+    loggingLevel = 'DEBUG'
+    consoleLogEnabled = false
+    fileLogEnabled = true
+    logFileName = 'Priam.log'
+    logDir = "./logs"
+    //servicePort = 15090
+    //stopKey = 'stopKey'
 }
 
-//farm {
-//    httpPort=15080
-//    contextPath='/priam-web'
-//    host='ec2-52-2-55-92.compute-1.amazonaws.com'
-//}
+
 

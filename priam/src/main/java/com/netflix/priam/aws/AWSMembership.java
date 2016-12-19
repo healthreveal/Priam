@@ -288,13 +288,29 @@ public class AWSMembership implements IMembership
             	}
             		
             	Filter vpcFilter = new Filter().withName("vpc-id").withValues(vpcid); //only fetch SG for the vpc id of the running instance
+                logger.debug("vpcFilter is: " + vpcFilter.toString());
             	DescribeSecurityGroupsRequest req = new DescribeSecurityGroupsRequest().withFilters(nameFilter, vpcFilter);
+                logger.debug("req is: " + req.toString());
                 DescribeSecurityGroupsResult result = client.describeSecurityGroups(req);
-                for (SecurityGroup group : result.getSecurityGroups())
-                    for (IpPermission perm : group.getIpPermissions())
-                        if (perm.getFromPort() == from && perm.getToPort() == to)
+                logger.debug("result is: " + result.toString());
+                for (SecurityGroup group : result.getSecurityGroups()) {
+                    logger.debug("group is: " + group.toString());
+                    for (IpPermission perm : group.getIpPermissions()) {
+                        logger.debug("perm is: " + perm.toString());
+                        Integer myGetFromPort = perm.getFromPort();
+                        logger.debug("myGetFromPort is: " + mygetFromPort.toString());
+                        Integer myGetToPort = perm.getToPort();
+                        logger.debug("myGetToPort is: " + mygetToPort.toString());
+                        
+                        logger.debug("from is: " + from.toString());
+                        logger.debug("to is: " + to.toString());
+                        
+                        if (perm.getFromPort() == from && perm.getToPort() == to) {
+                            logger.debug("perm.getIpRanges() is: " + perm.getIpRanges().toString());
                             ipPermissions.addAll(perm.getIpRanges());
-                
+                        }
+                    }
+                }                
                 logger.info("Fetch current permissions for vpc env of running instance");
             }
             
