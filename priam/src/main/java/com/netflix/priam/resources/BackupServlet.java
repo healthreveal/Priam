@@ -241,7 +241,10 @@ public class BackupServlet
             }
     		
     	} else {
-    		String token = SystemUtils.getDataFromUrl("http://ec2-52-2-55-92.compute-1.amazonaws.com:15080/priam-web/REST/v1/cassconfig/get_token");
+                String tokenIntro = "http://";
+                String tokenEnding = ":15080/priam-web/REST/v1/cassconfig/get_token";
+                String publicHost = SystemUtils.getDataFromUrl("http://169.254.169.254/latest/meta-data/public-hostname").trim();
+    		String token = SystemUtils.getDataFromUrl(tokenIntro + publicHost + tokenEnding);
             if (token != null && !token.isEmpty() ) {
             	strBuffer.append(',');
                 strBuffer.append("token=" + token);        	

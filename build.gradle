@@ -62,9 +62,4 @@ subprojects {
     }
 }
 
-//gretty {
-//  port = 15080
-//  // contextPath = '/MyWebApp'
-//  // ... many more properties
-//}
 
