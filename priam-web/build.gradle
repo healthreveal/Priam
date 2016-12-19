@@ -14,7 +14,7 @@ gretty {
     loggingLevel = 'DEBUG'
     consoleLogEnabled = false
     fileLogEnabled = true
-    logFileName = 'Priam.log'
+    logFileName = 'Priam'
     logDir = "./logs"
     //servicePort = 15090
     //stopKey = 'stopKey'
