@@ -23,6 +23,8 @@
 # Logs and databases #
 ######################
 *.log
+*.out
+*.err
 
 # OS generated files #
 ######################
