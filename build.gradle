@@ -61,3 +61,10 @@ subprojects {
       testCompile 'junit:junit:4.8'
     }
 }
+
+//gretty {
+//  port = 15080
+//  // contextPath = '/MyWebApp'
+//  // ... many more properties
+//}
+

@@ -10,3 +10,19 @@ dependencies {
     compile project(':priam-dse-extensions')
     compile project(':priam-cass-extensions')
 }
+
+gretty {
+  httpPort = 15080
+  // contextPath = '/priam-web'
+  host = 'ec2-52-2-55-92.compute-1.amazonaws.com'
+  stopKey=91911
+  stopPort=16080
+  // ... many more properties
+}
+
+//farm {
+//    httpPort=15080
+//    contextPath='/priam-web'
+//    host='ec2-52-2-55-92.compute-1.amazonaws.com'
+//}
+
