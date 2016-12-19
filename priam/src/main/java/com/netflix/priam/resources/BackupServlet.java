@@ -241,7 +241,7 @@ public class BackupServlet
             }
     		
     	} else {
-    		String token = SystemUtils.getDataFromUrl("http://localhost:15080/priam-web/REST/v1/cassconfig/get_token");
+    		String token = SystemUtils.getDataFromUrl("http://ec2-52-2-55-92.compute-1.amazonaws.com:15080/priam-web/REST/v1/cassconfig/get_token");
             if (token != null && !token.isEmpty() ) {
             	strBuffer.append(',');
                 strBuffer.append("token=" + token);        	

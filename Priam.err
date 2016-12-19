@@ -1,11 +1,7 @@
-Note: Some input files use or override a deprecated API.
-Note: Recompile with -Xlint:deprecation for details.
-Note: Some input files use unchecked or unsafe operations.
-Note: Recompile with -Xlint:unchecked for details.
-Dec 19, 2016 5:21:39 PM com.sun.jersey.api.core.PackagesResourceConfig init
+Dec 19, 2016 5:37:43 PM com.sun.jersey.api.core.PackagesResourceConfig init
 INFO: Scanning for root resource and provider classes in the packages:
   com.netflix.priam.resources
-Dec 19, 2016 5:21:39 PM com.sun.jersey.api.core.ScanningResourceConfig logClasses
+Dec 19, 2016 5:37:43 PM com.sun.jersey.api.core.ScanningResourceConfig logClasses
 INFO: Root resource classes found:
   class com.netflix.priam.resources.CassandraConfig
   class com.netflix.priam.resources.PriamInstanceResource
@@ -13,26 +9,26 @@ INFO: Root resource classes found:
   class com.netflix.priam.resources.CassandraAdmin
   class com.netflix.priam.resources.RestoreServlet
   class com.netflix.priam.resources.BackupServlet
-Dec 19, 2016 5:21:39 PM com.sun.jersey.api.core.ScanningResourceConfig init
+Dec 19, 2016 5:37:43 PM com.sun.jersey.api.core.ScanningResourceConfig init
 INFO: No provider classes found.
-Dec 19, 2016 5:21:39 PM com.sun.jersey.server.impl.application.WebApplicationImpl _initiate
+Dec 19, 2016 5:37:43 PM com.sun.jersey.server.impl.application.WebApplicationImpl _initiate
 INFO: Initiating Jersey application, version 'Jersey: 1.9.1 09/14/2011 02:36 PM'
-Dec 19, 2016 5:21:40 PM com.sun.jersey.guice.spi.container.GuiceComponentProviderFactory getComponentProvider
+Dec 19, 2016 5:37:44 PM com.sun.jersey.guice.spi.container.GuiceComponentProviderFactory getComponentProvider
 INFO: Binding com.netflix.priam.resources.BackupServlet to GuiceInstantiatedComponentProvider
-Dec 19, 2016 5:21:40 PM com.sun.jersey.guice.spi.container.GuiceComponentProviderFactory getComponentProvider
+Dec 19, 2016 5:37:44 PM com.sun.jersey.guice.spi.container.GuiceComponentProviderFactory getComponentProvider
 INFO: Binding com.netflix.priam.resources.CassandraAdmin to GuiceInstantiatedComponentProvider
-Dec 19, 2016 5:21:40 PM com.sun.jersey.guice.spi.container.GuiceComponentProviderFactory getComponentProvider
+Dec 19, 2016 5:37:44 PM com.sun.jersey.guice.spi.container.GuiceComponentProviderFactory getComponentProvider
 INFO: Binding com.netflix.priam.resources.RestoreServlet to GuiceInstantiatedComponentProvider
-Dec 19, 2016 5:21:40 PM com.sun.jersey.guice.spi.container.GuiceComponentProviderFactory getComponentProvider
+Dec 19, 2016 5:37:44 PM com.sun.jersey.guice.spi.container.GuiceComponentProviderFactory getComponentProvider
 INFO: Binding com.netflix.priam.resources.PriamInstanceResource to GuiceInstantiatedComponentProvider
-Dec 19, 2016 5:21:40 PM com.sun.jersey.guice.spi.container.GuiceComponentProviderFactory getComponentProvider
+Dec 19, 2016 5:37:44 PM com.sun.jersey.guice.spi.container.GuiceComponentProviderFactory getComponentProvider
 INFO: Binding com.netflix.priam.resources.CassandraConfig to GuiceInstantiatedComponentProvider
-Dec 19, 2016 5:21:40 PM com.sun.jersey.guice.spi.container.GuiceComponentProviderFactory getComponentProvider
+Dec 19, 2016 5:37:44 PM com.sun.jersey.guice.spi.container.GuiceComponentProviderFactory getComponentProvider
 INFO: Binding com.netflix.priam.resources.SecurityGroupAdmin to GuiceInstantiatedComponentProvider
-Dec 19, 2016 5:25:08 PM com.sun.jersey.spi.container.ContainerResponse mapMappableContainerException
+Dec 19, 2016 5:40:24 PM com.sun.jersey.spi.container.ContainerResponse mapMappableContainerException
 SEVERE: The RuntimeException could not be mapped to a response, re-throwing to the HTTP container
 java.lang.RuntimeException: java.net.ConnectException: Connection refused (Connection refused)
-	at com.netflix.priam.utils.SystemUtils.getDataFromUrl(SystemUtils.java:70)
+	at com.netflix.priam.utils.SystemUtils.getDataFromUrl(SystemUtils.java:77)
 	at com.netflix.priam.backup.BackupStatusMgr.add(BackupStatusMgr.java:70)
 	at com.netflix.priam.backup.SnapshotBackup.postProcesing(SnapshotBackup.java:245)
 	at com.netflix.priam.backup.SnapshotBackup.execute(SnapshotBackup.java:216)
@@ -102,6 +98,6 @@ Caused by: java.net.ConnectException: Connection refused (Connection refused)
 	at sun.net.www.protocol.http.HttpURLConnection.getInputStream0(HttpURLConnection.java:1546)
 	at sun.net.www.protocol.http.HttpURLConnection.getInputStream(HttpURLConnection.java:1474)
 	at java.net.HttpURLConnection.getResponseCode(HttpURLConnection.java:480)
-	at com.netflix.priam.utils.SystemUtils.getDataFromUrl(SystemUtils.java:53)
+	at com.netflix.priam.utils.SystemUtils.getDataFromUrl(SystemUtils.java:58)
 	... 49 more
 
