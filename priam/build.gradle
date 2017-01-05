@@ -1,1 +1,4 @@
 //apply plugin: 'nebula.test-jar'
+apply plugin: 'war'
+apply from: 'https://raw.github.com/akhikhl/gretty/master/pluginScripts/gretty.plugin'
+
