@@ -10,7 +10,8 @@ dependencies {
 
 gretty {
     httpPort = 15080
-    host = '127.0.0.1'
+    //host = '127.0.0.1'
+    host = 'ec2-52-86-102-90.compute-1.amazonaws.com'
     loggingLevel = 'DEBUG'
     consoleLogEnabled = false
     fileLogEnabled = true
