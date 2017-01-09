@@ -107,7 +107,9 @@ public class StandardTuner implements CassandraTuner
         configfureSecurity(map);
         configureGlobalCaches(config, map);
         //force to 1 until vnodes are properly supported
-	    map.put("num_tokens", 1);
+        //fnorman comment: we assume this is very old.  changing to the new
+        //default of 256 (as of Jan 2017)
+	    map.put("num_tokens", 256);
 	    
 	    
 	    addExtraCassParams(map);

@@ -8,6 +8,7 @@ cd /usr/share/cassandra/projects/Priam
 source /etc/profile.d/gradle.sh
 source /etc/profile.d/java.sh
 
+#nohup gradle jettyStart --stacktrace --debug 1> Priam.out 2> Priam.err &
 nohup gradle jettyStart 1> Priam.out 2> Priam.err &
 
 
